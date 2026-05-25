@@ -1,37 +1,23 @@
 import { NextResponse } from "next/server";
 
-import connectDB from "@/lib/mongodb";
-
-import Contact from "@/models/Contact";
-
-export async function GET() {
+export async function POST(req: Request) {
 
   try {
 
-    await connectDB();
+    const body = await req.json();
 
-    const contact = await Contact.create({
-
-      name: "Shaik Subhani",
-
-      email: "test@gmail.com",
-
-      message: "MongoDB Working",
-
-    });
+    console.log(body);
 
     return NextResponse.json({
       success: true,
-      data: contact,
+      message: "Message received successfully",
     });
 
-  } catch (error: any) {
-
-    console.log(error);
+  } catch (error) {
 
     return NextResponse.json({
       success: false,
-      error: error.message,
+      message: "Something went wrong",
     });
 
   }
