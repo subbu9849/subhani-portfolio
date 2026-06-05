@@ -13,19 +13,19 @@ import {
   FaGithub,
   FaLinkedin,
   FaInstagram,
+  FaArrowRight,
+  FaBars,
+  FaArrowUp,
   FaReact,
   FaNodeJs,
   FaPython,
   FaDatabase,
-  FaArrowRight,
-  FaBars,
   FaCode,
   FaBrain,
   FaRobot,
   FaChartLine,
   FaCloud,
   FaFigma,
-  FaArrowUp,
 } from "react-icons/fa";
 
 import {
@@ -119,24 +119,32 @@ export default function Home() {
 
   return (
 
-    <main className="bg-[#fffafb] text-[#111827] overflow-hidden relative">
+    <main className="bg-slate-50 text-[#111827] overflow-hidden relative">
 
       {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(244,114,182,0.15),transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(251,113,133,0.15),transparent_35%)]"></div>
+
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(124,58,237,0.15),transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(79,70,229,0.15),transparent_35%)]"></div>
 
       {/* Progress Bar */}
+
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-pink-500 origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1 bg-violet-600 origin-left z-50"
         style={{ scaleX }}
       />
 
+      {/* Glow Effects */}
+
+      <div className="fixed top-[-200px] left-[-200px] w-[450px] h-[450px] bg-violet-200 rounded-full blur-3xl opacity-30"></div>
+
+      <div className="fixed bottom-[-200px] right-[-200px] w-[450px] h-[450px] bg-indigo-200 rounded-full blur-3xl opacity-30"></div>
+
       {/* NAVBAR */}
 
-      <nav className="sticky top-0 z-50 backdrop-blur-xl bg-white/70 border-b border-pink-100">
+      <nav className="sticky top-0 z-50 backdrop-blur-xl bg-white/70 border-b border-violet-100">
 
         <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-16 py-6 flex items-center justify-between">
 
-          <h1 className="text-2xl font-bold text-pink-500">
+          <h1 className="text-2xl font-bold text-violet-600">
             Subhani
           </h1>
 
@@ -155,7 +163,7 @@ export default function Home() {
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden"
+            className="md:hidden text-violet-600"
           >
             <FaBars />
           </button>
@@ -178,7 +186,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
           >
 
-            <div className="bg-pink-100 text-pink-500 inline-flex px-5 py-2 rounded-full">
+            <div className="bg-violet-100 text-violet-600 inline-flex px-5 py-2 rounded-full">
 
               AI Engineer
 
@@ -188,7 +196,7 @@ export default function Home() {
 
               Shaik{" "}
 
-              <span className="text-pink-500">
+              <span className="text-violet-600">
                 Subhani
               </span>
 
@@ -203,8 +211,8 @@ export default function Home() {
             <p className="mt-8 text-gray-600 leading-8 max-w-xl">
 
               Passionate about building intelligent applications,
-              AI-powered solutions, data-driven platforms,
-              and modern web experiences.
+              AI-powered systems, modern web platforms,
+              and real-world software solutions.
 
             </p>
 
@@ -212,7 +220,7 @@ export default function Home() {
 
               <a
                 href="#projects"
-                className="bg-pink-500 text-white px-7 py-4 rounded-2xl flex items-center gap-3"
+                className="bg-violet-600 hover:bg-violet-700 text-white px-7 py-4 rounded-2xl flex items-center gap-3 transition"
               >
                 View Projects
                 <FaArrowRight />
@@ -221,7 +229,7 @@ export default function Home() {
               <a
                 href="/Shaik_Subhani_Resume.pdf"
                 download
-                className="border border-pink-200 px-7 py-4 rounded-2xl"
+                className="border border-violet-200 px-7 py-4 rounded-2xl"
               >
                 Download Resume
               </a>
@@ -230,24 +238,15 @@ export default function Home() {
 
             <div className="flex gap-5 mt-8">
 
-              <a
-                href="https://github.com/subbu9849"
-                target="_blank"
-              >
+              <a href="https://github.com/subbu9849" target="_blank">
                 <FaGithub size={24} />
               </a>
 
-              <a
-                href="https://www.linkedin.com/in/shaik-subhani-745542328"
-                target="_blank"
-              >
+              <a href="https://www.linkedin.com/in/shaik-subhani-745542328" target="_blank">
                 <FaLinkedin size={24} />
               </a>
 
-              <a
-                href="https://instagram.com/subhani___99"
-                target="_blank"
-              >
+              <a href="https://instagram.com/subhani___99" target="_blank">
                 <FaInstagram size={24} />
               </a>
 
@@ -284,17 +283,17 @@ export default function Home() {
 
         <h2 className="text-4xl font-bold text-center">
 
-          About <span className="text-pink-500">Me</span>
+          About <span className="text-violet-600">Me</span>
 
         </h2>
 
         <p className="max-w-4xl mx-auto text-center mt-8 text-gray-600 leading-8">
 
-          I am Shaik Subhani, a B.Tech Artificial Intelligence
-          and Data Science student at Vignan Institute of
-          Information Technology. I enjoy building AI-powered
-          applications, full-stack web platforms, and
-          data-driven solutions that solve real-world problems.
+          I am Shaik Subhani, a B.Tech Artificial Intelligence and
+          Data Science student at Vignan Institute of Information
+          Technology. Passionate about Artificial Intelligence,
+          Full Stack Development, Data Analytics and building
+          impactful software solutions.
 
         </p>
 
@@ -307,22 +306,22 @@ export default function Home() {
         <div className="grid md:grid-cols-4 gap-6">
 
           <div className="bg-white p-8 rounded-3xl shadow-lg text-center">
-            <h3 className="text-4xl font-bold text-pink-500">10+</h3>
+            <h3 className="text-4xl font-bold text-violet-600">10+</h3>
             <p>Projects</p>
           </div>
 
           <div className="bg-white p-8 rounded-3xl shadow-lg text-center">
-            <h3 className="text-4xl font-bold text-pink-500">7.69</h3>
+            <h3 className="text-4xl font-bold text-violet-600">7.69</h3>
             <p>CGPA</p>
           </div>
 
           <div className="bg-white p-8 rounded-3xl shadow-lg text-center">
-            <h3 className="text-4xl font-bold text-pink-500">3rd</h3>
+            <h3 className="text-4xl font-bold text-violet-600">3rd</h3>
             <p>Year Student</p>
           </div>
 
           <div className="bg-white p-8 rounded-3xl shadow-lg text-center">
-            <h3 className="text-4xl font-bold text-pink-500">1+</h3>
+            <h3 className="text-4xl font-bold text-violet-600">1+</h3>
             <p>Internship</p>
           </div>
 
@@ -344,13 +343,13 @@ export default function Home() {
           Education
         </motion.h2>
 
-        <div className="bg-white rounded-3xl p-10 shadow-xl mt-16 border border-pink-100">
+        <div className="bg-white rounded-3xl p-10 shadow-xl mt-16 border border-violet-100">
 
           <h3 className="text-2xl font-bold">
             Vignan Institute of Information Technology
           </h3>
 
-          <p className="text-pink-500 mt-3 font-medium">
+          <p className="text-violet-600 mt-3 font-medium">
             B.Tech – Artificial Intelligence & Data Science
           </p>
 
@@ -363,9 +362,11 @@ export default function Home() {
           </p>
 
           <p className="mt-4 text-gray-600 leading-8">
+
             Focused on Artificial Intelligence, Machine Learning,
-            Data Analytics, Software Engineering, and Full Stack
-            Application Development.
+            Data Analytics, Software Engineering, Cloud Computing
+            and Full Stack Development.
+
           </p>
 
         </div>
@@ -388,33 +389,32 @@ export default function Home() {
           Experience
         </motion.h2>
 
-        <div className="bg-white rounded-3xl p-10 shadow-xl mt-16 border border-pink-100">
+        <div className="bg-white rounded-3xl p-10 shadow-xl mt-16 border border-violet-100">
 
           <h3 className="text-2xl font-bold">
             AI & Full Stack Developer Intern
           </h3>
 
-          <p className="text-pink-500 mt-3 font-medium">
+          <p className="text-violet-600 mt-3 font-medium">
             Future Interns
           </p>
 
           <ul className="mt-6 space-y-3 text-gray-600">
 
             <li>
-              • Built responsive web applications using modern
-              frontend technologies.
+              • Built responsive web applications and dashboards.
             </li>
 
             <li>
-              • Worked on AI-powered solutions and automation tools.
+              • Developed AI-powered solutions and automation tools.
             </li>
 
             <li>
-              • Developed full-stack applications and APIs.
+              • Created full-stack applications using modern technologies.
             </li>
 
             <li>
-              • Deployed applications and optimized performance.
+              • Worked with APIs, databases and cloud deployment.
             </li>
 
           </ul>
@@ -436,7 +436,9 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-4xl font-bold"
         >
-          Skills & <span className="text-pink-500">Technologies</span>
+
+          Skills & <span className="text-violet-600">Technologies</span>
+
         </motion.h2>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
@@ -445,10 +447,10 @@ export default function Home() {
 
             <div
               key={index}
-              className="bg-white rounded-3xl p-10 shadow-lg border border-pink-100 hover:-translate-y-2 transition"
+              className="bg-white rounded-3xl p-10 shadow-lg border border-violet-100 hover:-translate-y-2 transition duration-300"
             >
 
-              <div className="text-3xl text-pink-500 flex justify-center">
+              <div className="text-3xl text-violet-600 flex justify-center">
                 {skill.icon}
               </div>
 
@@ -481,31 +483,40 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
 
-          <div className="bg-white rounded-3xl p-8 shadow-lg border border-pink-100">
-            <h3 className="text-2xl font-bold text-pink-500">
+          <div className="bg-white rounded-3xl p-8 shadow-lg border border-violet-100">
+
+            <h3 className="text-2xl font-bold text-violet-600">
               10+
             </h3>
+
             <p className="mt-3">
               Full Stack & AI Projects Built
             </p>
+
           </div>
 
-          <div className="bg-white rounded-3xl p-8 shadow-lg border border-pink-100">
-            <h3 className="text-2xl font-bold text-pink-500">
+          <div className="bg-white rounded-3xl p-8 shadow-lg border border-violet-100">
+
+            <h3 className="text-2xl font-bold text-violet-600">
               Internship
             </h3>
+
             <p className="mt-3">
-              AI & Full Stack Developer Intern
+              Future Interns
             </p>
+
           </div>
 
-          <div className="bg-white rounded-3xl p-8 shadow-lg border border-pink-100">
-            <h3 className="text-2xl font-bold text-pink-500">
+          <div className="bg-white rounded-3xl p-8 shadow-lg border border-violet-100">
+
+            <h3 className="text-2xl font-bold text-violet-600">
               7.69
             </h3>
+
             <p className="mt-3">
               Current Academic CGPA
             </p>
+
           </div>
 
         </div>
@@ -525,7 +536,9 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-4xl font-bold text-center"
         >
-          Featured <span className="text-pink-500">Projects</span>
+
+          Featured <span className="text-violet-600">Projects</span>
+
         </motion.h2>
 
         <div className="grid lg:grid-cols-2 gap-8 mt-16">
@@ -534,7 +547,7 @@ export default function Home() {
 
             <div
               key={index}
-              className="bg-white rounded-3xl p-10 shadow-lg border border-pink-100 hover:-translate-y-2 transition"
+              className="bg-white rounded-3xl p-10 shadow-lg border border-violet-100 hover:-translate-y-2 transition duration-300"
             >
 
               <h3 className="text-2xl font-bold">
@@ -550,7 +563,7 @@ export default function Home() {
                 <a
                   href="https://github.com/subbu9849"
                   target="_blank"
-                  className="text-pink-500 font-medium"
+                  className="text-violet-600 font-medium"
                 >
                   GitHub →
                 </a>
@@ -576,7 +589,9 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-4xl font-bold text-center"
         >
+
           My Journey
+
         </motion.h2>
 
         <div className="space-y-6 mt-16">
@@ -587,17 +602,17 @@ export default function Home() {
             "Built Full Stack Applications",
             "Entered Artificial Intelligence & Data Science",
             "Completed Professional Internship",
-            "Building Production-Ready Applications",
+            "Building Production Ready Applications",
           ].map((item, index) => (
 
             <div
               key={index}
-              className="bg-white rounded-3xl p-8 shadow-lg border border-pink-100"
+              className="bg-white rounded-3xl p-8 shadow-lg border border-violet-100 hover:-translate-y-1 transition"
             >
 
               <div className="flex items-center gap-4">
 
-                <div className="w-4 h-4 rounded-full bg-pink-500"></div>
+                <div className="w-4 h-4 rounded-full bg-violet-600"></div>
 
                 <h3 className="font-semibold text-lg">
                   {item}
@@ -620,7 +635,7 @@ export default function Home() {
         className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-16 py-28"
       >
 
-        <div className="bg-gradient-to-r from-pink-500 to-rose-400 rounded-[40px] p-12 md:p-16 text-center text-white shadow-2xl">
+        <div className="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-[40px] p-12 md:p-16 text-center text-white shadow-2xl">
 
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -637,7 +652,8 @@ export default function Home() {
 
             Open to internships, freelance projects,
             collaborations and exciting opportunities
-            in AI, Full Stack Development and Data Analytics.
+            in Artificial Intelligence, Full Stack Development
+            and Data Analytics.
 
           </p>
 
@@ -645,7 +661,7 @@ export default function Home() {
 
             <a
               href="mailto:ssk461262@gmail.com"
-              className="bg-white text-pink-500 px-8 py-4 rounded-2xl font-semibold"
+              className="bg-white text-violet-600 px-8 py-4 rounded-2xl font-semibold"
             >
               Contact Me
             </a>
@@ -678,7 +694,7 @@ export default function Home() {
 
       {/* FOOTER */}
 
-      <footer className="bg-[#111827] text-white mt-10">
+      <footer className="bg-slate-900 text-white mt-10">
 
         <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-16 py-16">
 
@@ -692,7 +708,7 @@ export default function Home() {
 
                 Shaik{" "}
 
-                <span className="text-pink-500">
+                <span className="text-violet-500">
                   Subhani
                 </span>
 
@@ -750,7 +766,7 @@ export default function Home() {
                 <a
                   href="https://github.com/subbu9849"
                   target="_blank"
-                  className="bg-white/10 w-12 h-12 rounded-2xl flex items-center justify-center hover:bg-pink-500 transition"
+                  className="bg-white/10 w-12 h-12 rounded-2xl flex items-center justify-center hover:bg-violet-600 transition"
                 >
                   <FaGithub />
                 </a>
@@ -758,7 +774,7 @@ export default function Home() {
                 <a
                   href="https://www.linkedin.com/in/shaik-subhani-745542328"
                   target="_blank"
-                  className="bg-white/10 w-12 h-12 rounded-2xl flex items-center justify-center hover:bg-pink-500 transition"
+                  className="bg-white/10 w-12 h-12 rounded-2xl flex items-center justify-center hover:bg-violet-600 transition"
                 >
                   <FaLinkedin />
                 </a>
@@ -766,7 +782,7 @@ export default function Home() {
                 <a
                   href="https://instagram.com/subhani___99"
                   target="_blank"
-                  className="bg-white/10 w-12 h-12 rounded-2xl flex items-center justify-center hover:bg-pink-500 transition"
+                  className="bg-white/10 w-12 h-12 rounded-2xl flex items-center justify-center hover:bg-violet-600 transition"
                 >
                   <FaInstagram />
                 </a>
@@ -796,7 +812,7 @@ export default function Home() {
             behavior: "smooth",
           })
         }
-        className="fixed bottom-6 right-6 bg-pink-500 text-white w-14 h-14 rounded-full shadow-xl hover:scale-110 transition z-50"
+        className="fixed bottom-6 right-6 bg-violet-600 hover:bg-violet-700 text-white w-14 h-14 rounded-full shadow-xl hover:scale-110 transition z-50"
       >
 
         <FaArrowUp />
