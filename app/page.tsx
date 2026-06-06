@@ -255,20 +255,46 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            variants={floating}
-            animate="animate"
-            className="flex justify-center"
-          >
+  variants={floating}
+  animate="animate"
+  className="flex justify-center"
+>
 
-            <Image
-              src="/profile.jpg"
-              alt="Shaik Subhani"
-              width={420}
-              height={420}
-              className="rounded-full"
-            />
+  <div className="relative">
 
-          </motion.div>
+    {/* Violet Glow */}
+
+    <div className="absolute -inset-6 bg-violet-500 rounded-full blur-3xl opacity-20"></div>
+
+    {/* Indigo Glow */}
+
+    <div className="absolute -inset-10 bg-indigo-500 rounded-full blur-3xl opacity-10"></div>
+
+    {/* Profile Image */}
+
+    <Image
+      src="/profile.jpg"
+      alt="Shaik Subhani"
+      width={420}
+      height={420}
+      priority
+      className="
+        relative
+        w-[320px]
+        h-[320px]
+        md:w-[420px]
+        md:h-[420px]
+        rounded-full
+        object-cover
+        border-0
+        border-white
+        shadow-2xl
+      "
+    />
+
+  </div>
+
+</motion.div>
 
         </div>
 
@@ -465,7 +491,88 @@ export default function Home() {
         </div>
 
       </section>
+{/* CERTIFICATES */}
 
+<section
+  id="certificates"
+  className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-16 py-28"
+>
+
+  <motion.h2
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    className="text-4xl font-bold text-center"
+  >
+
+    Certificates & <span className="text-violet-600">Achievements</span>
+
+  </motion.h2>
+
+  <p className="text-center text-gray-600 mt-5">
+    View my verified certifications and professional achievements.
+  </p>
+
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+
+    {[
+      {
+        title: "Artificial Intelligence",
+        issuer: "LinkedIn Learning",
+      },
+      {
+        title: "Full Stack Development",
+        issuer: "Professional Certification",
+      },
+      {
+        title: "Machine Learning",
+        issuer: "Industry Certification",
+      },
+      {
+        title: "Data Analytics",
+        issuer: "Professional Certification",
+      },
+      {
+        title: "Cloud Computing",
+        issuer: "Industry Certification",
+      },
+      {
+        title: "Software Development",
+        issuer: "Professional Certification",
+      },
+    ].map((cert, index) => (
+
+      <a
+        key={index}
+        href="https://www.linkedin.com/in/shaik-subhani-745542328"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-white border border-violet-100 rounded-3xl p-8 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition duration-300"
+      >
+
+        <div className="text-violet-600 text-4xl mb-4">
+          
+        </div>
+
+        <h3 className="text-xl font-bold">
+          {cert.title}
+        </h3>
+
+        <p className="text-gray-500 mt-3">
+          {cert.issuer}
+        </p>
+
+        <div className="mt-5 text-violet-600 font-semibold">
+          View Certificate →
+        </div>
+
+      </a>
+
+    ))}
+
+  </div>
+
+</section>
       {/* ACHIEVEMENTS */}
 
       <section
@@ -575,7 +682,125 @@ export default function Home() {
           ))}
 
         </div>
+{/* EDUCATION */}
 
+<section
+  id="education"
+  className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-16 py-28"
+>
+
+  <motion.h2
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    className="text-4xl font-bold text-center"
+  >
+    Education
+  </motion.h2>
+
+  <p className="text-center text-gray-500 mt-4">
+    My academic journey and educational background.
+  </p>
+
+  <div className="relative mt-20">
+
+    {/* Timeline Line */}
+
+    <div className="absolute left-6 top-0 h-full w-1 bg-violet-200 hidden md:block"></div>
+
+    {/* B.Tech */}
+
+    <div className="relative mb-12 flex items-start gap-8">
+
+      <div className="hidden md:flex w-12 h-12 bg-violet-600 rounded-full items-center justify-center text-white font-bold z-10">
+        🎓
+      </div>
+
+      <div className="bg-white rounded-3xl p-8 shadow-xl border border-violet-100 w-full hover:-translate-y-1 transition">
+
+        <h3 className="text-2xl font-bold">
+          B.Tech – Artificial Intelligence & Data Science
+        </h3>
+
+        <p className="text-violet-600 mt-3 font-medium">
+          Vignan Institute of Information Technology
+        </p>
+
+        <p className="text-gray-600 mt-3">
+          2024 – 2028
+        </p>
+
+        <div className="mt-5 inline-flex bg-violet-100 text-violet-700 px-4 py-2 rounded-full font-medium">
+          CGPA: 7.69
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* Intermediate */}
+
+    <div className="relative mb-12 flex items-start gap-8">
+
+      <div className="hidden md:flex w-12 h-12 bg-indigo-600 rounded-full items-center justify-center text-white font-bold z-10">
+        📚
+      </div>
+
+      <div className="bg-white rounded-3xl p-8 shadow-xl border border-indigo-100 w-full hover:-translate-y-1 transition">
+
+        <h3 className="text-2xl font-bold">
+          Intermediate Education (IPE)
+        </h3>
+
+        <p className="text-indigo-600 mt-3 font-medium">
+          MPC Stream
+        </p>
+
+        <p className="text-gray-600 mt-3">
+          2022 – 2024
+        </p>
+
+        <div className="mt-5 inline-flex bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full font-medium">
+          GPA: 8.25
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* SSC */}
+
+    <div className="relative flex items-start gap-8">
+
+      <div className="hidden md:flex w-12 h-12 bg-purple-600 rounded-full items-center justify-center text-white font-bold z-10">
+        🏫
+      </div>
+
+      <div className="bg-white rounded-3xl p-8 shadow-xl border border-purple-100 w-full hover:-translate-y-1 transition">
+
+        <h3 className="text-2xl font-bold">
+          Secondary School Certificate (SSC)
+        </h3>
+
+        <p className="text-purple-600 mt-3 font-medium">
+          SSC Board
+        </p>
+
+        <p className="text-gray-600 mt-3">
+          Completed: 2022
+        </p>
+
+        <div className="mt-5 inline-flex bg-purple-100 text-purple-700 px-4 py-2 rounded-full font-medium">
+          Percentage: 75%
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
       </section>      {/* JOURNEY */}
 
       <section
